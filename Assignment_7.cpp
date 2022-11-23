@@ -96,6 +96,7 @@ int main() {
 		}
 		inCredit.read(reinterpret_cast<char*>(&client), sizeof(ClientData)); //앞에서 읽을때 커서가 옮겨졌다. 따로 seek 할 필요 없이 그냥 다시 읽음.
 		//if (client.getAccountNumber() == 100) { //100번째에 대한 예외처리문 없으면 출력 전에 eof됨. 왜 없어도 되는걸까
+		// //fact: 마지막에 eof 마커라는게 존재해서 바로 종료 안한다.
 		//	inCredit.clear();
 		//	inCredit.seekg(0);
 		//	outputLine(cout, client);
